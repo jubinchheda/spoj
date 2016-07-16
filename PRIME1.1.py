@@ -53,17 +53,21 @@ stringList =[]
 for line in fileinput.input():
    stringList.append(line.rstrip())
    
+N = int( stringList[0])
 del stringList[0]
 
 for item in stringList:
    paramList.append(item.split())
    
+ptr =0
 for item in paramList:
+   ptr = ptr
    low = int(item[0])
    high = int(item[1])
    for n in xrange(low, high+1):
-      if(is_prime(n)):
+      if(n!=1 and is_prime(n)):
 	     print n
-   print
-   
-	 
+   if (ptr<N-1):
+      print
+   ptr = ptr +1
+   #print ptr
