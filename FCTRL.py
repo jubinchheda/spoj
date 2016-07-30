@@ -1,4 +1,3 @@
-
 import fileinput
 
 def Z(n):
@@ -7,7 +6,7 @@ def Z(n):
    while n>p: 
       result+=(n/p)
       p*=5
-   print result
+   return result
 
 
 def inputToList(stringList):
@@ -19,9 +18,6 @@ def inputToList(stringList):
 stringList = []
 inputToList(stringList)
 stringList.pop(0)
-paramList = []
+
 for item in stringList:
-   paramList.append(item)
-   
-for item in paramList:
-   Z(int(item))
+   print Z(int(item))
